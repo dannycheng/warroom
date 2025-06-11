@@ -1,0 +1,359 @@
+tool_use_id=toolu_vrtx_01RiSrF67GC2ZhYQUuKMZAru
+tool_name=replace_code
+input={"old_str": "    <title>Stock Tracker</title>", "new_str": "    <title>WAR ROOM Supply Tracker</title>"}
+tool_use_id=toolu_vrtx_01LNfyn8ays7NbMfguvk1gha
+tool_name=replace_code
+input={"old_str": "                    <h1 class=\"text-2xl font-bold text-white\">Stock Tracker</h1>", "new_str": "                    <h1 class=\"text-2xl font-bold text-white\">WAR ROOM Supply Tracker</h1>"}
+tool_use_id=toolu_vrtx_0181Xhvi3heLWx6eGJr3NesP
+tool_name=replace_code
+input={"old_str": "                <div class=\"grid grid-cols-1 md:grid-cols-4 gap-4\">\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Item Name</label>\n                        <input id=\"itemName\" type=\"text\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"Enter item name\">\n                    </div>\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Current Stock</label>\n                        <input id=\"currentStock\" type=\"number\" min=\"0\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"0\">\n                    </div>\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Reorder Point</label>\n                        <input id=\"reorderPoint\" type=\"number\" min=\"0\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"10\">\n                    </div>\n                    <div class=\"flex items-end\">\n                        <button id=\"saveItemBtn\" class=\"w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-semibold\">\n                            Save Item\n                        </button>\n                    </div>\n                </div>", "new_str": "                <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4\">\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Clinic Name</label>\n                        <input id=\"clinicName\" type=\"text\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"Enter clinic name\">\n                    </div>\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Item Name</label>\n                        <input id=\"itemName\" type=\"text\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"Enter item name\">\n                    </div>\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Current Stock</label>\n                        <input id=\"currentStock\" type=\"number\" min=\"0\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"0\">\n                    </div>\n                    <div>\n                        <label class=\"block text-sm font-medium mb-2\">Reorder Point</label>\n                        <input id=\"reorderPoint\" type=\"number\" min=\"0\" class=\"w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base\" placeholder=\"10\">\n                    </div>\n                    <div class=\"flex items-end\">\n                        <button id=\"saveItemBtn\" class=\"w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-semibold\">\n                            Save Item\n                        </button>\n                    </div>\n                </div>"}
+tool_use_id=toolu_vrtx_019saBPEHKD6fWU2qrFYYf4R
+tool_name=replace_code
+input={"old_str": "        function saveItem() {\n            const name = document.getElementById('itemName').value.trim();\n            const currentStock = parseInt(document.getElementById('currentStock').value) || 0;\n            const reorderPoint = parseInt(document.getElementById('reorderPoint').value) || 10;\n\n            if (!name) {\n                alert('Please enter an item name');\n                return;\n            }", "new_str": "        function saveItem() {\n            const clinicName = document.getElementById('clinicName').value.trim();\n            const name = document.getElementById('itemName').value.trim();\n            const currentStock = parseInt(document.getElementById('currentStock').value) || 0;\n            const reorderPoint = parseInt(document.getElementById('reorderPoint').value) || 10;\n\n            if (!clinicName) {\n                alert('Please enter a clinic name');\n                return;\n            }\n            if (!name) {\n                alert('Please enter an item name');\n                return;\n            }"}
+tool_use_id=toolu_vrtx_01SXiADtcwUh96oe8cyo7xcF
+tool_name=replace_code
+input={"old_str": "            const item = {\n                id: nextId++,\n                name,\n                currentStock,\n                reorderPoint,\n                history: [{\n                    date: new Date().toLocaleDateString(),\n                    action: 'Added',\n                    quantity: currentStock,\n                    newStock: currentStock\n                }]\n            };", "new_str": "            const item = {\n                id: nextId++,\n                clinicName,\n                name,\n                currentStock,\n                reorderPoint,\n                history: [{\n                    date: new Date().toLocaleDateString(),\n                    action: 'Added',\n                    quantity: currentStock,\n                    newStock: currentStock\n                }]\n            };"}
+tool_use_id=toolu_vrtx_01Sb1LB53jSDtV4zTc2E4J4m
+tool_name=replace_code
+input={"old_str": "        function clearForm() {\n            document.getElementById('itemName').value = '';\n            document.getElementById('currentStock').value = '';\n            document.getElementById('reorderPoint').value = '';\n        }", "new_str": "        function clearForm() {\n            document.getElementById('clinicName').value = '';\n            document.getElementById('itemName').value = '';\n            document.getElementById('currentStock').value = '';\n            document.getElementById('reorderPoint').value = '';\n        }"}
+tool_use_id=toolu_vrtx_011djehZDPwC9B211kooWuLv
+tool_name=replace_code
+input={"old_str": "                return `\n                    <div class=\"bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6\">\n                        <div class=\"flex justify-between items-start mb-4\">\n                            <h3 class=\"text-lg font-semibold truncate\">${item.name}</h3>\n                            <span class=\"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-${statusColor}-100 text-${statusColor}-800 dark:bg-${statusColor}-900 dark:text-${statusColor}-200\">\n                                ${stockLevel}\n                            </span>\n                        </div>", "new_str": "                return `\n                    <div class=\"bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6\">\n                        <div class=\"flex justify-between items-start mb-2\">\n                            <h3 class=\"text-lg font-semibold truncate\">${item.name}</h3>\n                            <span class=\"inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-${statusColor}-100 text-${statusColor}-800 dark:bg-${statusColor}-900 dark:text-${statusColor}-200\">\n                                ${stockLevel}\n                            </span>\n                        </div>\n                        <p class=\"text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium\">${item.clinicName}</p>"}
+tool_use_id=toolu_vrtx_018o96UwNZRdXPkYaESZy7i3
+tool_name=replace_code
+input={"old_str": "                lowStockList.innerHTML = lowStockItems.map(item => \n                    `<li><strong>${item.name}</strong>: ${item.currentStock} remaining (reorder at ${item.reorderPoint})</li>`\n                ).join('');", "new_str": "                lowStockList.innerHTML = lowStockItems.map(item => \n                    `<li><strong>${item.name}</strong> at <em>${item.clinicName}</em>: ${item.currentStock} remaining (reorder at ${item.reorderPoint})</li>`\n                ).join('');"}
+tool_use_id=toolu_vrtx_01HimLUYY6BYrVcF9iCEMg45
+tool_name=replace_code
+input={"old_str": "            if (!addItemForm.classList.contains('hidden')) {\n                document.getElementById('itemName').focus();\n            }", "new_str": "            if (!addItemForm.classList.contains('hidden')) {\n                document.getElementById('clinicName').focus();\n            }"}
+Perfect! I've updated the WAR ROOM Supply Tracker to be very simple and include clinic names as essential information.
+
+Key Changes:
+
+✅ App name: Changed to "WAR ROOM Supply Tracker"
+✅ Clinic Name: Added as the first required field when adding items
+✅ Simple interface: Clinic name is prominently displayed under each item name
+✅ Alerts: Low stock alerts now show both item name and clinic name
+How it works:
+
+Click "+ Add Item"
+Enter Clinic Name (required)
+Enter Item Name (required)
+Set current stock and reorder point
+Track usage with +1/-1 buttons or custom adjustments
+Get alerts when any clinic's supplies run low
+The clinic name is now essential to the tracking - you'll always know which clinic needs supplies when you get low stock alerts!
+
+html
+Copy
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAR ROOM Supply Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="h-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="bg-primary shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-6">
+                    <h1 class="text-2xl font-bold text-white">WAR ROOM Supply Tracker</h1>
+                    <div class="flex items-center space-x-4">
+                        <span id="lowStockCount" class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold hidden">
+                            0 Low Stock
+                        </span>
+                        <button id="addItemBtn" class="bg-white text-primary px-4 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                            + Add Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Add Item Form -->
+            <div id="addItemForm" class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8 hidden">
+                <h2 class="text-xl font-semibold mb-4">Add New Item</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Clinic Name</label>
+                        <input id="clinicName" type="text" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base" placeholder="Enter clinic name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Item Name</label>
+                        <input id="itemName" type="text" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base" placeholder="Enter item name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Current Stock</label>
+                        <input id="currentStock" type="number" min="0" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base" placeholder="0">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Reorder Point</label>
+                        <input id="reorderPoint" type="number" min="0" class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 text-base" placeholder="10">
+                    </div>
+                    <div class="flex items-end">
+                        <button id="saveItemBtn" class="w-full bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                            Save Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Low Stock Alerts -->
+            <div id="alertsSection" class="mb-8 hidden">
+                <div class="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400 p-4 rounded-lg">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-red-800 dark:text-red-200">Low Stock Alert</h3>
+                            <div class="mt-2 text-sm text-red-700 dark:text-red-300">
+                                <ul id="lowStockList" class="list-disc pl-5 space-y-1"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Items Grid -->
+            <div id="itemsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Items will be populated here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="text-center py-12">
+                <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2 2v-5m16 0h-2M4 13h2m0 0V9a2 2 0 012-2h2a2 2 0 012 2v4.01" />
+                </svg>
+                <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">No items yet</h3>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Get started by adding your first inventory item.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Dark mode setup
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // App State
+        let items = [];
+        let nextId = 1;
+
+        // DOM Elements
+        const addItemBtn = document.getElementById('addItemBtn');
+        const addItemForm = document.getElementById('addItemForm');
+        const saveItemBtn = document.getElementById('saveItemBtn');
+        const itemsGrid = document.getElementById('itemsGrid');
+        const emptyState = document.getElementById('emptyState');
+        const alertsSection = document.getElementById('alertsSection');
+        const lowStockList = document.getElementById('lowStockList');
+        const lowStockCount = document.getElementById('lowStockCount');
+
+        // Event Listeners
+        addItemBtn.addEventListener('click', toggleAddForm);
+        saveItemBtn.addEventListener('click', saveItem);
+
+        function toggleAddForm() {
+            addItemForm.classList.toggle('hidden');
+            if (!addItemForm.classList.contains('hidden')) {
+                document.getElementById('clinicName').focus();
+            }
+        }
+
+        function saveItem() {
+            const clinicName = document.getElementById('clinicName').value.trim();
+            const name = document.getElementById('itemName').value.trim();
+            const currentStock = parseInt(document.getElementById('currentStock').value) || 0;
+            const reorderPoint = parseInt(document.getElementById('reorderPoint').value) || 10;
+
+            if (!clinicName) {
+                alert('Please enter a clinic name');
+                return;
+            }
+            if (!name) {
+                alert('Please enter an item name');
+                return;
+            }
+
+            const item = {
+                id: nextId++,
+                clinicName,
+                name,
+                currentStock,
+                reorderPoint,
+                history: [{
+                    date: new Date().toLocaleDateString(),
+                    action: 'Added',
+                    quantity: currentStock,
+                    newStock: currentStock
+                }]
+            };
+
+            items.push(item);
+            clearForm();
+            addItemForm.classList.add('hidden');
+            renderItems();
+            updateAlerts();
+        }
+
+        function clearForm() {
+            document.getElementById('clinicName').value = '';
+            document.getElementById('itemName').value = '';
+            document.getElementById('currentStock').value = '';
+            document.getElementById('reorderPoint').value = '';
+        }
+
+        function renderItems() {
+            if (items.length === 0) {
+                emptyState.classList.remove('hidden');
+                itemsGrid.classList.add('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            itemsGrid.classList.remove('hidden');
+
+            itemsGrid.innerHTML = items.map(item => {
+                const stockLevel = getStockLevel(item);
+                const statusColor = stockLevel === 'low' ? 'red' : stockLevel === 'medium' ? 'yellow' : 'green';
+                
+                return `
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold truncate">${item.name}</h3>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-${statusColor}-100 text-${statusColor}-800 dark:bg-${statusColor}-900 dark:text-${statusColor}-200">
+                                ${stockLevel}
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">${item.clinicName}</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Current Stock:</span>
+                                <span class="font-semibold text-lg">${item.currentStock}</span>
+                            </div>
+                            
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">Reorder Point:</span>
+                                <span class="text-sm">${item.reorderPoint}</span>
+                            </div>
+                            
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                <div class="bg-${statusColor}-500 h-2 rounded-full" style="width: ${Math.min((item.currentStock / (item.reorderPoint * 2)) * 100, 100)}%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex space-x-2">
+                            <button onclick="adjustStock(${item.id}, -1)" class="flex-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 px-3 py-2 rounded-lg text-sm font-medium hover:bg-red-200 dark:hover:bg-red-800 transition-colors">
+                                Use -1
+                            </button>
+                            <button onclick="adjustStock(${item.id}, 1)" class="flex-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 px-3 py-2 rounded-lg text-sm font-medium hover:bg-green-200 dark:hover:bg-green-800 transition-colors">
+                                Add +1
+                            </button>
+                            <button onclick="showStockDialog(${item.id})" class="flex-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors">
+                                Adjust
+                            </button>
+                        </div>
+                        
+                        <button onclick="deleteItem(${item.id})" class="mt-2 w-full text-red-600 dark:text-red-400 text-sm hover:text-red-800 dark:hover:text-red-200 transition-colors">
+                            Delete Item
+                        </button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function getStockLevel(item) {
+            if (item.currentStock <= item.reorderPoint) return 'low';
+            if (item.currentStock <= item.reorderPoint * 1.5) return 'medium';
+            return 'high';
+        }
+
+        function adjustStock(itemId, adjustment) {
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+
+            const newStock = Math.max(0, item.currentStock + adjustment);
+            item.currentStock = newStock;
+            
+            item.history.unshift({
+                date: new Date().toLocaleDateString(),
+                action: adjustment > 0 ? 'Added' : 'Used',
+                quantity: Math.abs(adjustment),
+                newStock: newStock
+            });
+
+            renderItems();
+            updateAlerts();
+        }
+
+        function showStockDialog(itemId) {
+            const item = items.find(i => i.id === itemId);
+            if (!item) return;
+
+            const adjustment = prompt(`Current stock: ${item.currentStock}\nEnter adjustment (+/- number):`);
+            if (adjustment !== null && adjustment !== '') {
+                const num = parseInt(adjustment);
+                if (!isNaN(num)) {
+                    adjustStock(itemId, num);
+                }
+            }
+        }
+
+        function deleteItem(itemId) {
+            if (confirm('Are you sure you want to delete this item?')) {
+                items = items.filter(i => i.id !== itemId);
+                renderItems();
+                updateAlerts();
+            }
+        }
+
+        function updateAlerts() {
+            const lowStockItems = items.filter(item => getStockLevel(item) === 'low');
+            
+            if (lowStockItems.length > 0) {
+                alertsSection.classList.remove('hidden');
+                lowStockCount.classList.remove('hidden');
+                lowStockCount.textContent = `${lowStockItems.length} Low Stock`;
+                
+                lowStockList.innerHTML = lowStockItems.map(item => 
+                    `<li><strong>${item.name}</strong> at <em>${item.clinicName}</em>: ${item.currentStock} remaining (reorder at ${item.reorderPoint})</li>`
+                ).join('');
+            } else {
+                alertsSection.classList.add('hidden');
+                lowStockCount.classList.add('hidden');
+            }
+        }
+
+        // Initialize
+        renderItems();
+    </script>
+</body>
+</html>
